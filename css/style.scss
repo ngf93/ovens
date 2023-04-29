@@ -1355,7 +1355,7 @@ main {
             background: url(../imgs/img4.png) no-repeat ;
             background-color: #F1F1F1;
             background-size: contain;
-            background-position: right center;
+            background-position: right bottom;
             color: $font-color;
             @media (max-width: $bp-xl) {
                 background-blend-mode: overlay;
@@ -1808,6 +1808,53 @@ main {
                 color: $gray;
                 font-size: 1.1em;
             }
+        }
+    }
+}
+
+.sec-14 {
+    color: #4C4C5E;
+    .top {
+        @include flex(row, space-between, center, nowrap);
+        img {
+            width: 30%;
+            transform: translateX(-8%);
+            filter: drop-shadow(20px 9px 17px rgba(0, 0, 0, 0.07));
+        }
+    }
+    ol {
+        @include list();
+        counter-reset: counter;
+        padding: 2em;
+        background: $bg-color;
+        box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.17);
+        border-radius: $radius;
+        @media (max-width: $bp-sm) {
+            padding: 1em;
+        }
+        li {
+            counter-increment: counter;
+            position: relative;
+            @include flex(row, flex-start, center, nowrap);
+            &:not(:last-child){margin-bottom: 1.5em;}
+            &::before {
+                content: counter(counter);
+                color: #4C4C5E;;
+                font-weight: 700;
+                font-size: 2.5em;
+                line-height: 100%;
+                width: 5rem;
+                height: 1em;
+                @include flex();
+                @media (max-width: $bp-md) {
+                    width: 3.5rem;
+                }
+                @media (max-width: $bp-sm) {
+                    width: 3rem;
+                    font-size: 2em;
+                }
+            }
+            span {flex: 1;}
         }
     }
 }

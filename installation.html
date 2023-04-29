@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <title>печи Astov - Монтаж</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="index.html" class="logo">
+                    <img src="imgs/logo.svg" alt="logo">
+                    <hr class="d-none d-sm-block">
+                    <h6 class="mb-0">Печи с установкой <br class="d-none d-sm-inline"/>под ключ</h6>
+                </a>
+
+                <div class="offcanvas-lg offcanvas-end" tabindex="-1" id="offcanvasMenu">
+                    <button type="button" class="btn-close d-lg-none" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasMenu">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.116 8l-4.558 4.558.884.884L8 8.884l4.558 4.558.884-.884L8.884 8l4.558-4.558-.884-.884L8 7.116 3.442 2.558l-.884.884L7.116 8z"></path>
+                        </svg>
+                    </button>
+                    <div class="offcanvas-body">
+                        <nav>
+                            <ul class="list-unstyled d-flex">
+                                <li class="hover-menu">
+                                    <a href="catalog.html">Все печи</a>
+                                    <ul class="sub-menu">
+                                        <li class="hover-submenu">
+                                            <a href="catalog.html">Камины</a>
+                                            <ul class="sub-menu-2">
+                                                <li>
+                                                    <a href="">Серия F</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Серия R</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Куб</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Aplit</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Ферро</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Легго</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Киви</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="">Порталы</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Грили</a>
+                                        </li>
+                                        <li class="hover-submenu">
+                                            <a href="">Топки</a>
+                                            <ul class="sub-menu-2">
+                                                <li>
+                                                    <a href="">Прямое стекло</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Два стекла</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Три стекла</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Туннельная</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Призма</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Авторские</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="hover-submenu">
+                                            <a href="">Аксессуары</a>
+                                            <ul class="sub-menu-2">
+                                                <li>
+                                                    <a href="">Дровники</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Прямые решетки</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Прямые решетки</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Рамки</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Решетки</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="">Монтаж</a></li>
+                                <li><a href="">Проектирование</a></li>
+                                <li><a href="delivery.html">Доставка</a></li>
+                                <li><a href="not-found.html">Наши работы</a></li>
+                                <li><a href="">Контакты</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                
+                <div class="d-flex">
+                    <div class="offcanvas-xl offcanvas-top" tabindex="-1" id="offcanvasSearch">
+                        <div class="offcanvas-body">
+                            <form action="">
+                                <input type="search" placeholder="Поиск среди товаров" class="fs-75">
+                            </form>
+                        </div>
+                    </div>
+                    <button class="btn-3 fs-12 p-2 d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch">
+                        <svg width="1em" height="1em" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.95833 10.2917C8.35157 10.2917 10.2917 8.35157 10.2917 5.95833C10.2917 3.5651 8.35157 1.625 5.95833 1.625C3.5651 1.625 1.625 3.5651 1.625 5.95833C1.625 8.35157 3.5651 10.2917 5.95833 10.2917Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.3748 11.3758L9.01855 9.01953" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                            
+                    </button>
+                    <a class="btn-3 p-2 ms-2" href="cart.html">
+                        <img src="imgs/icons/shopping-cart.svg" alt="Корзина">
+                    </a>
+                    <button class="btn-3 fs-12 p-2 d-lg-none ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 5H0V4h16v1zm0 8H0v-1h16v1zm0-4.008H0V8h16v.992z"></path>
+                        </svg>            
+                    </button>
+                </div>
+            </div>
+            <div class="mt-3 d-none d-lg-flex justify-content-between align-items-center">
+                <address class="gray fs-75">г. не Москва ул. не Ленина д. не 1</address>
+                <ul class="list-unstyled d-flex align-items-center">
+                    <li><a class="fs-875 gray" href="tel:+7 XXX XXX XX XX">+7 XXX XXX XX XX</a></li>
+                    <li class="ms-3">
+                        <a href="">
+                            <img src="imgs/icons/whatsapp.svg" alt="whatsapp">
+                        </a>
+                    </li>
+                    <li class="ms-2">
+                        <a href="">
+                            <img src="imgs/icons/telegram.svg" alt="telegram">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="sec-5 pt-5 mb-8">
+            <div class="container">
+                <h2 class="mb-0">взгляните на наши <br/>работы</h2>
+                <div class="swiper swiper-portfolio">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="portfolio-item">
+                                <img src="imgs/img.jpg" alt="">
+                                <button type="button" class="btn-1 fs-875">Развернуть</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="portfolio-item">
+                                <img src="imgs/img.jpg" alt="">
+                                <button type="button" class="btn-1 fs-875">Развернуть</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="portfolio-item">
+                                <img src="imgs/img.jpg" alt="">
+                                <button type="button" class="btn-1 fs-875">Развернуть</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="portfolio-item">
+                                <img src="imgs/img.jpg" alt="">
+                                <button type="button" class="btn-1 fs-875">Развернуть</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="portfolio-item">
+                                <img src="imgs/img.jpg" alt="">
+                                <button type="button" class="btn-1 fs-875">Развернуть</button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="portfolio-item">
+                                <img src="imgs/img.jpg" alt="">
+                                <button type="button" class="btn-1 fs-875">Развернуть</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <img src="imgs/icons/arrow-left.svg" alt="prev">                                 
+                    </div>
+                    <div class="swiper-button-next">
+                        <img src="imgs/icons/arrow-right.svg" alt="next">                             
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec-14 container mb-8">
+            <div class="row justify-content-center">
+                <div class="col-12 col-xl-11 col-xxl-10">
+                    <div class="top">
+                        <h2>Этапы установки камина или печи:</h2>
+                        <img src="imgs/img4cut.png" alt="Этапы установки камина или печи:">
+                    </div>
+                    <ol>
+                        <li><span>Подготовительные работы: необходимо выполнить замеры, подготовить место установки, провести монтаж дымохода и подключить трубы к дымоходу.</span></li>
+                        <li><span>Установка камина или печи: на этом этапе происходит непосредственно установка камина или печи.</span></li>
+                        <li><span>Подключение к дымоходу: после установки камина или печи необходимо подключить его к дымоходу и обеспечить надежную герметизацию.</span></li>
+                        <li><span>Подключение к электричеству: при необходимости подключения к электричеству, следует обеспечить безопасность и правильное подключение.</span></li>
+                        <li><span>Тестирование и настройка: после установки камина или печи необходимо провести тестирование и настройку оборудования для обеспечения его правильной работы.</span></li>
+                        <li><span>Обучение владельца: после установки камина или печи, владелец должен получить обучение по работе с оборудованием и правильному использованию для обеспечения безопасности и долговечности работы камина или печи.</span></li>
+                    </ol>
+                    <p class="text-center fs-13 mt-4">Свяжитесь с нами, чтобы узнать больше о наших <br/>услугах по установке и обслуживанию печей.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec-13 container mb-8">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-9 col-lg-8 col-xl-7 col-xxl-6">
+                    <form action="">
+                        <h3 class="mb-4 mb-md-5">Связаться с нами:</h3>
+                        <h5 class="fw-7 text-uppercase mb-2">Ваше имя*</h5>
+                        <input class="mb-4" type="text" placeholder="иван иванов">
+                        <h5 class="fw-7 text-uppercase mb-2">Ваш телефон*</h5>
+                        <input class="mb-4" type="tel" placeholder="+7 XXX XXX XX XX">
+                        <h5 class="fw-7 text-uppercase mb-2">Задайте вопрос</h5>
+                        <textarea class="mb-4" rows="5" placeholder="Введите сообщение"></textarea>
+                        <div class="d-flex flex-column flex-sm-row-reverse">
+                            <button type="submit" class="w-xs-100 btn-1 ms-sm-3 mb-3 mb-sm-0">Отправить</button>
+                            <p class="gray fs-07">Нажимая на кнопку вы соглашаетесь с политикой конфиденциальности</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-5 col-xxl-6">
+                    <a href="index.html" class="logo mb-3">
+                        <img src="imgs/logo.svg" alt="logo">
+                    </a>
+                    <a href="tel:+7xxxxxxxxxx" class="phone-link mb-3 mb-md-1">+7 xxx xxx xx xx</a>
+                    <button type="button" class="fs-875 text-decoration-underline mb-2">заказать обратный звонок</button>
+
+                    <ul class="list-unstyled d-flex align-items-center mb-1">
+                        <li>
+                            <a href="">
+                                <img src="imgs/icons/whatsapp.svg" alt="whatsapp">
+                            </a>
+                        </li>
+                        <li class="ms-2">
+                            <a href="">
+                                <img src="imgs/icons/telegram.svg" alt="telegram">
+                            </a>
+                        </li>
+                    </ul>
+                    <address><strong>Адрес:</strong> г. не Москва ул. не Ленина д. не 1</address>
+                    <p>Ежедневно с ... до ...</p>
+                </div>
+                <div class="col-12 col-md-7 col-xxl-6 mt-4 mt-md-0">
+                    <div class="row">
+                        <div class="col-6 col-lg-4">
+                            <h6 class="fs-10">КАТАЛОГ</h6>
+                            <ul class="list-unstyled menu">
+                                <li><a href="">Печи-камины</a></li>
+                                <li><a href="">Порталы</a></li>
+                                <li><a href="">Топки</a></li>
+                                <li><a href="">Грили</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-lg-4">
+                            <h6 class="fs-10">КОМПАНИЯ</h6>
+                            <ul class="list-unstyled menu">
+                                <li><a href="delivery.html">Доставка</a></li>
+                                <li><a href="">Монтаж</a></li>
+                                <li><a href="">О нас</a></li>
+                                <li><a href="">Наши работы</a></li>
+                                <li><a href="">Контакты</a></li>
+                            </ul>
+                        </div>
+                        <div class="mt-4 mt-lg-0 col-12 col-lg-4 d-flex flex-column flex-sm-row flex-lg-column justify-content-between">
+                            <form action="">
+                                <input type="search" placeholder="Поиск среди товаров" class="fs-75">
+                            </form>
+                            <div class="text-end gray fs-875 fw-3 mt-2 mt-sm-0">2023 / РусКамин</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="callback" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.116 8l-4.558 4.558.884.884L8 8.884l4.558 4.558.884-.884L8.884 8l4.558-4.558-.884-.884L8 7.116 3.442 2.558l-.884.884L7.116 8z"></path>
+                    </svg>
+                </button>
+                <div class="modal-body">
+                    <form action="">
+                        <h3 class="mb-4 mb-md-5">Связаться с нами:</h3>
+                        <h5 class="fw-7 text-uppercase mb-2">Ваше имя*</h5>
+                        <input class="mb-4" type="text" placeholder="иван иванов">
+                        <h5 class="fw-7 text-uppercase mb-2">Ваш телефон*</h5>
+                        <input class="mb-4" type="tel" placeholder="+7 XXX XXX XX XX">
+                        <h5 class="fw-7 text-uppercase mb-2">Задайте вопрос</h5>
+                        <textarea class="mb-4" rows="5" placeholder="Введите сообщение"></textarea>
+                        <div class="d-flex flex-column flex-sm-row-reverse">
+                            <button type="submit" class="w-xs-100 btn-1 ms-sm-3 mb-3 mb-sm-0">Отправить</button>
+                            <p class="gray fs-07">Нажимая на кнопку вы соглашаетесь с политикой конфиденциальности</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/sliders.js"></script>
+    <script src="js/RangeSlider.js"></script>
+</body>
+</html>

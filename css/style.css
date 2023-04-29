@@ -2179,7 +2179,7 @@ main {
   background: url(../imgs/img4.png) no-repeat;
   background-color: #F1F1F1;
   background-size: contain;
-  background-position: right center;
+  background-position: right bottom;
   color: #575757;
 }
 
@@ -3038,6 +3038,121 @@ main {
 .sec-13 ol li p {
   color: #9C9C9C;
   font-size: 1.1em;
+}
+
+.sec-14 {
+  color: #4C4C5E;
+}
+
+.sec-14 .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.sec-14 .top img {
+  width: 30%;
+  -webkit-transform: translateX(-8%);
+          transform: translateX(-8%);
+  -webkit-filter: drop-shadow(20px 9px 17px rgba(0, 0, 0, 0.07));
+          filter: drop-shadow(20px 9px 17px rgba(0, 0, 0, 0.07));
+}
+
+.sec-14 ol {
+  list-style: none;
+  padding-left: 0px;
+  counter-reset: counter;
+  padding: 2em;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.17);
+          box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.17);
+  border-radius: 3px;
+}
+
+@media (max-width: 575.98px) {
+  .sec-14 ol {
+    padding: 1em;
+  }
+}
+
+.sec-14 ol li {
+  counter-increment: counter;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.sec-14 ol li:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+
+.sec-14 ol li::before {
+  content: counter(counter);
+  color: #4C4C5E;
+  font-weight: 700;
+  font-size: 2.5em;
+  line-height: 100%;
+  width: 5rem;
+  height: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+@media (max-width: 767.98px) {
+  .sec-14 ol li::before {
+    width: 3.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .sec-14 ol li::before {
+    width: 3rem;
+    font-size: 2em;
+  }
+}
+
+.sec-14 ol li span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .sec-404 {
