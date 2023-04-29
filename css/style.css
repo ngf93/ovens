@@ -2916,6 +2916,130 @@ main {
   margin-left: .5em;
 }
 
+.sec-13 blockquote {
+  border-left: 3px solid #EFC3A3;
+  padding-left: 1em;
+}
+
+.sec-13 ul {
+  color: #9C9C9C;
+  font-size: 1.1em;
+  list-style: none;
+  padding-left: 0px;
+}
+
+.sec-13 ul li {
+  position: relative;
+  padding-left: 2em;
+}
+
+.sec-13 ul li::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  width: 1.5em;
+  height: 3px;
+  background-color: #EFC3A3;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.sec-13 form {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 0px 10.918px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 0px 10.918px rgba(0, 0, 0, 0.12);
+  border-radius: 3px;
+  padding: 3em;
+}
+
+@media (max-width: 575.98px) {
+  .sec-13 form {
+    padding: 1.5em;
+  }
+}
+
+.sec-13 ol {
+  list-style: none;
+  padding-left: 0px;
+  counter-reset: my-counter;
+}
+
+.sec-13 ol li {
+  --w: 55%;
+  width: var(--w);
+  margin-bottom: 2em;
+  counter-increment: my-counter;
+  position: relative;
+  padding-left: 3.5em;
+  min-height: 5em;
+}
+
+@media (max-width: 991.98px) {
+  .sec-13 ol li {
+    --w: 65%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .sec-13 ol li {
+    --w: 75%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .sec-13 ol li {
+    --w: 100%;
+  }
+}
+
+.sec-13 ol li:not(:last-child) {
+  margin-bottom: 2em;
+}
+
+.sec-13 ol li::before {
+  content: counter(my-counter);
+  color: #ffffff;
+  background: linear-gradient(91.23deg, #EFC3A3 0%, #F8D9C3 100.15%), #EFC3A3;
+  font-weight: 700;
+  font-size: 2.5em;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1em;
+  height: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.sec-13 ol li:nth-child(even) {
+  margin-left: calc(100% - var(--w));
+}
+
+.sec-13 ol li h6 {
+  text-transform: uppercase;
+  margin-bottom: .5em;
+  font-weight: 700;
+}
+
+.sec-13 ol li p {
+  color: #9C9C9C;
+  font-size: 1.1em;
+}
+
 .sec-404 {
   min-height: inherit;
 }

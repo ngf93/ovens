@@ -10,7 +10,7 @@
         href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="css/style.min.css" />
-    <title>печи Astov - Все печи</title>
+    <title>печи Astov - Доставка</title>
 </head>
 <body>
     <header>
@@ -165,233 +165,96 @@
     </header>
 
     <main>
-        <section class="sec-3 no-after pt-5 mb-8">
-            <div class="container">
-                <h1>Все печи</h1>
-                <div class="row gx-xl-5">
-                    <div class="col-12 col-lg-3">
-                        <button class="btn-1 w-100 mb-4 fs-12 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilter">Фильтр</button>
-                        <div class="offcanvas-lg offcanvas-end" tabindex="-1" id="offcanvasFilter">
-                            <button type="button" class="btn-close d-lg-none" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasFilter">
-                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.116 8l-4.558 4.558.884.884L8 8.884l4.558 4.558.884-.884L8.884 8l4.558-4.558-.884-.884L8 7.116 3.442 2.558l-.884.884L7.116 8z"></path>
-                                </svg>
-                            </button>
-                            <div class="offcanvas-body">
-                                <form action="" class="filter">
-                                    <h5 class="accent">ФИЛЬТРЫ ТОВАРОВ</h5>
+        <section class="sec-13 container pt-5 mb-8">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-7 col-lg-6 pe-xl-5">
+                    <h1>Доставка</h1>
+                    <blockquote>
+                        <p class="fs-11">Логисты нашей компании рассчитают для Вас оптимальные схемы перевозки, обеспечат доставку в самые короткие сроки. Мы сотрудничаем с ведущими российскими и транспортными компаниями. Доставка осуществляется до терминала транспортной компании в Вашем городе либо до двери. С учетом Ваших пожеланий наши менеджеры с легкостью подберут Вам вариант Авиа перевозки вашего заказа, что позволит сэкономить время доставки.</p>
+                    </blockquote>
+                </div>
+                <div class="col-12 col-md-5 col-lg-6 mt-4 mt-md-0">
+                    <img src="imgs/img9.jpg" alt="Доставка" class="img-fluid">
+                </div>
+            </div>
+        </section>
 
-                                    <fieldset>
-                                        <legend>Цена</legend>
-                                        <div class="range mb-2">
-                                            <div id="my-slider" se-min="0" se-step="1" se-min-value="0" se-max-value="100" se-max="100" class="slider">
-                                                <div class="slider-touch-left">
-                                                    <span></span>
-                                                </div>
-                                                <div class="slider-touch-right">
-                                                    <span></span>
-                                                </div>
-                                                <div class="slider-line">
-                                                    <span></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex justify-content-between align-content-center">
-                                            <div id="result-min">min</div>
-                                            <div id="result-max">max</div>
-                                        </div>
-                                        
-                                    </fieldset>
+        <section class="sec-13 container mb-8">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10 col-xl-9 col-xxl-8">
+                    <h4 class="text-uppercase">Стоимость доставки:</h4>
 
-                                    <fieldset>
-                                        <legend>Категория</legend>
-                                        <label class="mb-2">
-                                            <input type="checkbox">
-                                            <span>APLIT</span>
-                                        </label>
-                                        <label class="mb-2">
-                                            <input type="checkbox">
-                                            <span>Киви</span>
-                                        </label>
-                                        <label class="mb-2">
-                                            <input type="checkbox">
-                                            <span>Куб</span>
-                                        </label>
-                                        <label class="mb-2">
-                                            <input type="checkbox">
-                                            <span>Легго</span>
-                                        </label>
-                                        <label class="mb-2">
-                                            <input type="checkbox">
-                                            <span>Серия R</span>
-                                        </label>
-                                        <label class="mb-2">
-                                            <input type="checkbox">
-                                            <span>Ферро</span>
-                                        </label>
-                                    </fieldset>
-
-                                    <fieldset>
-                                        <legend>Футеровка</legend>
-                                        <label class="mb-2">
-                                            <input type="checkbox">
-                                            <span>3D</span>
-                                        </label>
-                                        <label class="mb-2">
-                                            <input type="checkbox">
-                                            <span>Вермикулит</span>
-                                        </label>
-                                        <label class="mb-2">
-                                            <input type="checkbox">
-                                            <span>Тёмная керамика</span>
-                                        </label>
-                                        <label class="mb-2">
-                                            <input type="checkbox">
-                                            <span>Шамот</span>
-                                        </label>
-                                        <label class="mb-2">
-                                            <input type="checkbox">
-                                            <span>ШСП</span>
-                                        </label>
-                                    </fieldset>
-
-                                    <fieldset>
-                                        <legend>Диаметр дымохода</legend>
-                                        <label class="mb-2">
-                                            <input type="checkbox">
-                                            <span>200 мм</span>
-                                        </label>
-                                        <label class="mb-2">
-                                            <input type="checkbox">
-                                            <span>250 мм</span>
-                                        </label>
-                                    </fieldset>
-
-                                    <fieldset>
-                                        <legend>Подъемный механизм дверцы</legend>
-                                        <label class="mb-2">
-                                            <input type="radio" name="lifting">
-                                            <span>Да</span>
-                                        </label>
-                                        <label class="mb-2">
-                                            <input type="radio" name="lifting">
-                                            <span>Нет</span>
-                                        </label>
-                                    </fieldset>
-
-                                    <button type="submit" class="btn-1 mt-3 mt-xl-4 w-100">Применить</button>
-                                </form>
-                            </div>
+                    <div class="my-5 g-4 row row-cols-md-2">
+                        <div>
+                            <h4 class="text-uppercase">Сроки доставки:</h4>
+                            <blockquote>
+                                <p class="fs-11 gray">Завтра при наличии товара на складе. Послезавтра при наличии товара в распределительном центре. Сегодня при заказе срочной доставки.</p>
+                            </blockquote>
+                        </div>
+                        <div>
+                            <h4 class="text-uppercase">Способы оплаты:</h4>
+                            <ul>
+                                <li>Наличными курьеру.</li>
+                                <li>Наличными в пункте самовывоза.</li>
+                                <li>Банковским переводом по счету.</li>
+                                <li>Картой при доставке товара в...</li>
+                                <li>Картой через сайт.</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-9">
-                        <ul class="g-4 gx-md-3 gx-xxl-4 row row-cols-1 row-cols-sm-2 row-cols-md-3 ms-xl-5 list-unstyled">
-                            <li>
-                                <div class="product">
-                                    <a href=""><img src="imgs/product1.png" alt="КАМИННАЯ ТОПКА АСТОВ ПС 5574"></a>
-                                    <div class="py-3 px-3 px-xl-4">
-                                        <h6><a href="">КАМИННАЯ ТОПКА АСТОВ ПС 5574</a></h6>
-                                        <ul class="list-unstyled">
-                                            <li>Размер стекла 550 x 740 мм</li>
-                                            <li>Диаметр дымохода 200 мм</li>
-                                            <li>Мощность 5 кВт</li>
-                                        </ul>
-                                        <div class="mt-3 d-flex justify-content-between align-items-center">
-                                            <div class="price">280 000 р.</div>
-                                            <button type="button" class="btn-5">Купить</button>
-                                        </div>
-                                    </div>
-                                    <div class="mark">В НАЛИЧИИ</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="product">
-                                    <a href=""><img src="imgs/product2.png" alt="КАМИННАЯ ТОПКА АСТОВ М 700 Б"></a>
-                                    <div class="py-3 px-3 px-xl-4">
-                                        <h6><a href="">КАМИННАЯ ТОПКА АСТОВ М 700 Б</a></h6>
-                                        <ul class="list-unstyled">
-                                            <li>Размер стекла 550 x 740 мм</li>
-                                            <li>Диаметр дымохода 200 мм</li>
-                                            <li>Мощность 5 кВт</li>
-                                        </ul>
-                                        <div class="mt-3 d-flex justify-content-between align-items-center">
-                                            <div class="price">280 000 р.</div>
-                                            <button type="button" class="btn-5">Купить</button>
-                                        </div>
-                                    </div>
-                                    <div class="mark special">ХИТ</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="product">
-                                    <a href=""><img src="imgs/product3.png" alt="КАМИННАЯ ТОПКА АСТОВ ПС 700"></a>
-                                    <div class="py-3 px-3 px-xl-4">
-                                        <h6><a href=""></a>КАМИННАЯ ТОПКА АСТОВ ПС 700</a></h6>
-                                        <ul class="list-unstyled">
-                                            <li>Размер стекла 550 x 740 мм</li>
-                                            <li>Диаметр дымохода 200 мм</li>
-                                            <li>Мощность 5 кВт</li>
-                                        </ul>
-                                        <div class="mt-3 d-flex justify-content-between align-items-center">
-                                            <div class="price">
-                                                <span class="old">179 000 р.</span>
-                                                <span class="new">134 000 р.</span>
-                                            </div>
-                                            <button type="button" class="btn-5">Купить</button>
-                                        </div>
-                                    </div>
-                                    <div class="mark special">АКЦИЯ</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="product">
-                                    <a href=""><img src="imgs/product1.png" alt="КАМИННАЯ ТОПКА АСТОВ ПС 5574"></a>
-                                    <div class="py-3 px-3 px-xl-4">
-                                        <h6><a href="">КАМИННАЯ ТОПКА АСТОВ ПС 5574</a></h6>
-                                        <ul class="list-unstyled">
-                                            <li>Размер стекла 550 x 740 мм</li>
-                                            <li>Диаметр дымохода 200 мм</li>
-                                            <li>Мощность 5 кВт</li>
-                                        </ul>
-                                        <div class="mt-3 d-flex justify-content-between align-items-center">
-                                            <div class="price">280 000 р.</div>
-                                            <button type="button" class="btn-5">Купить</button>
-                                        </div>
-                                    </div>
-                                    <div class="mark">В НАЛИЧИИ</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="product">
-                                    <a href=""><img src="imgs/product2.png" alt="КАМИННАЯ ТОПКА АСТОВ М 700 Б"></a>
-                                    <div class="py-3 px-3 px-xl-4">
-                                        <h6><a href="">КАМИННАЯ ТОПКА АСТОВ М 700 Б</a></h6>
-                                        <ul class="list-unstyled">
-                                            <li>Размер стекла 550 x 740 мм</li>
-                                            <li>Диаметр дымохода 200 мм</li>
-                                            <li>Мощность 5 кВт</li>
-                                        </ul>
-                                        <div class="mt-3 d-flex justify-content-between align-items-center">
-                                            <div class="price">280 000 р.</div>
-                                            <button type="button" class="btn-5">Купить</button>
-                                        </div>
-                                    </div>
-                                    <div class="mark special">ХИТ</div>
-                                </div>
-                            </li>
-                        </ul>
 
-                        <nav class="mt-5">
-                            <ul class="pagination">
-                              <li><a href="#">Предыдущая</a></li>
-                              <li><a href="#" class="active">1</a></li>
-                              <li><a href="#">2</a></li>
-                              <li><a href="#">3</a></li>
-                              <li><a href="#">4</a></li>
-                              <li><a href="#">Следующая</a></li>
-                            </ul>
-                          </nav>
-                    </div>
+                    <h6 class="text-center gray fw-5 text-uppercase">Оставьте заявку и узнайте точную <br/>стоимость и время доставки.</h6>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#callback" class="btn-1 mx-auto">узнать</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec-13 container mb-8">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10 col-xl-9 col-xxl-8">
+                    <h2 class="text-center">этапы оформления заказа:</h2>
+                    <ol>
+                        <li>
+                            <h6>Оформите заказ на сайте</h6>
+                            <p>Добавьте в корзину интересующие вас печи и камины и оформите заказ.</p>
+                        </li>
+                        <li>
+                            <h6>Мы свяжемся с вами</h6>
+                            <p>Если вы приобретаете камин под ключ, договоримся о дате и времени, для выполнения замеров. </p>
+                        </li>
+                        <li>
+                            <h6>доставим в срок</h6>
+                            <p>Доставим камин или печь, в удобный для вас день.</p>
+                        </li>
+                        <li>
+                            <h6>Установим камин</h6>
+                            <p>Проведем подготовительные работы, сделаем дымоход, установим печь и приберем за собой.</p>
+                        </li>
+                        <li>
+                            <h6>Оплата</h6>
+                            <p>Вы оплачиваете после выполнения заказа.</p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec-13 container mb-8">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-9 col-lg-8 col-xl-7 col-xxl-6">
+                    <form action="">
+                        <h3 class="mb-4 mb-md-5">Связаться с нами:</h3>
+                        <h5 class="fw-7 text-uppercase mb-2">Ваше имя*</h5>
+                        <input class="mb-4" type="text" placeholder="иван иванов">
+                        <h5 class="fw-7 text-uppercase mb-2">Ваш телефон*</h5>
+                        <input class="mb-4" type="tel" placeholder="+7 XXX XXX XX XX">
+                        <h5 class="fw-7 text-uppercase mb-2">Задайте вопрос</h5>
+                        <textarea class="mb-4" rows="5" placeholder="Введите сообщение"></textarea>
+                        <div class="d-flex flex-column flex-sm-row-reverse">
+                            <button type="submit" class="w-xs-100 btn-1 ms-sm-3 mb-3 mb-sm-0">Отправить</button>
+                            <p class="gray fs-07">Нажимая на кнопку вы соглашаетесь с политикой конфиденциальности</p>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>

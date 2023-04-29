@@ -1731,6 +1731,87 @@ main {
     }
 }
 
+.sec-13 {
+    blockquote {
+        border-left: 3px solid $accent-color;
+        padding-left: 1em;
+    }
+    ul {
+        color: $gray;
+        font-size: 1.1em;
+        @include list();
+        li {
+            position: relative;
+            padding-left: 2em;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0px;
+                width: 1.5em;
+                height: 3px;
+                background-color: $accent-color;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    form {
+        background: #FFFFFF;
+        box-shadow: 0px 0px 10.918px rgba(0, 0, 0, 0.12);
+        border-radius: $radius;
+        padding: 3em;
+        @media (max-width: $bp-sm) {
+            padding: 1.5em;
+        }
+    }
+    ol {
+        @include list();
+        counter-reset: my-counter;
+        li {
+            --w: 55%;
+            width: var(--w);
+            margin-bottom: 2em;
+            counter-increment: my-counter;
+            position: relative;
+            padding-left: 3.5em;
+            min-height: 5em;
+            @media (max-width: $bp-lg) {
+                --w: 65%;
+            }
+            @media (max-width: $bp-md) {
+                --w: 75%;
+            }
+            @media (max-width: $bp-sm) {
+                --w: 100%;
+            }
+            &:not(:last-child){margin-bottom: 2em;}
+            &::before {
+                content: counter(my-counter);
+                color: $bg-color;
+                background: $gradient, $accent-color;
+                font-weight: 700;
+                font-size: 2.5em;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 1em;
+                height: 2em;
+                @include flex();
+            }
+            &:nth-child(even){margin-left: calc(100% - var(--w));}
+            h6 {
+                text-transform: uppercase;
+                margin-bottom: .5em;
+                font-weight: 700;
+            }
+            p {
+                color: $gray;
+                font-size: 1.1em;
+            }
+        }
+    }
+}
+
 .sec-404 {
     min-height: inherit;
 }
@@ -1805,26 +1886,6 @@ footer {
 
 .offcanvas {
     &-top {height: fit-content !important;}
-    // &-end {
-    //     @media (max-width: $bp-lg) {
-    //         nav {
-    //             position: relative;
-    //             z-index: 1;
-    //             font-size: 1.5em;
-    //             ul {
-    //                 flex-direction: column;
-    //                 li {
-    //                     &:not(:first-child) {
-    //                         margin-left: 0px;
-    //                     }
-    //                     a {
-    //                         padding: .5em;
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
     &-content {
         position: relative;
     }
