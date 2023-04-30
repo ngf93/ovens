@@ -65,7 +65,7 @@ h1, .h1 {
 
 @media (max-width: 767.98px) {
   h1, .h1 {
-    font-size: 1.5em;
+    font-size: 1.75em;
   }
 }
 
@@ -1065,7 +1065,7 @@ main {
     background-repeat: no-repeat;
     background-position: right center;
     background-size: cover;
-    height: 450px;
+    height: calc(100vh - var(--h-height));
   }
 }
 
@@ -1218,7 +1218,7 @@ main {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 500px;
+    height: calc(100vh - var(--h-height));
   }
 }
 
