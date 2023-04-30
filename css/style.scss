@@ -26,11 +26,11 @@ $bp-sm: 575.98px;
         --h-height: 70px;
     }
     @media (max-width: $bp-md) {
-        --f-height: 470px;
+        --f-height: 500px;
     }
     @media (max-width: $bp-sm) {
         --h-height: 50px;
-        --f-height: 420px;
+        --f-height: 480px;
     }
 }
 
@@ -120,9 +120,6 @@ h1, .h1 {
     @media (max-width: $bp-md) {
         font-size: 1.5em;
     }
-    @media (max-width: $bp-sm) {
-        font-size: 1.25em;
-    }
 }
 h2, .h2 {
     font-size: 3.5em;
@@ -159,7 +156,7 @@ h3 {
         font-size: 1.5em;
     }
     @media (max-width: $bp-sm) {
-        font-size: 1.25em;
+        font-size: 1.3em;
     }
 }
 h4 {
@@ -170,30 +167,18 @@ h4 {
     @media (max-width: $bp-md) {
         font-size: 1.3em;
     }
-    @media (max-width: $bp-sm) {
-        font-size: 1.2em;
-    }
 }
 h5 {
     font-size: 1.25em;
     text-align: left;
     font-weight: 500;
     margin-bottom: 1em;
-    @media (max-width: $bp-md) {
-        font-size: 1.15em;
-    }
-    @media (max-width: $bp-sm) {
-        font-size: 1.1em;
-    }
 }
 h6 {
     font-size: 1.1em;
     text-align: left;
     font-weight: 600;
     margin-bottom: 1em;
-    @media (max-width: $bp-md) {
-        font-size: 1em;
-    }
 }
 .fs {
     &-07 {font-size: 0.7em;}
@@ -352,6 +337,9 @@ button {
         &:hover, &:focus, &:active, &.active {
             color: $bg-color;
             background: darken($accent-color, 7%); 
+        }
+        @media (max-width: $bp-sm) {
+            border-radius: 0px;
         }
     }
     &-4 {
@@ -526,6 +514,9 @@ header {
                 flex-direction: column;
             }
             li {
+                @media (max-width: $bp-lg) {
+                    @include flex(row, flex-start, center, wrap);
+                }
                 &:not(:first-child){
                     margin-left: 1.5em;
                     @media (max-width: $bp-xxl) {
@@ -543,14 +534,32 @@ header {
                     transition: $transition;
                     @media (max-width: $bp-lg) {
                         padding: .5em;
+                        font-size: 1em;
+                    }
+                    @media (max-width: $bp-sm) {
+                        font-size: 1.2em;
                     }
                     &:hover, &:focus, &:active, &.active {
                         color: $accent-color;
                     }
                 }
+                .down {
+                    display: none;
+                    background-color: $accent-color;
+                    margin-left: 1em;
+                    width: 1em;
+                    height: 1em;
+                    img {
+                        width: 1em;
+                        height: 1em;
+                    }
+                    @media (max-width: $bp-lg) {
+                        display: flex;
+                    }
+                }
                 &.hover-menu {
                     position: relative;
-                    display: block;
+                    display: flex;
                     transition: $transition;
                     .sub-menu {
                         @include list();
@@ -565,7 +574,6 @@ header {
                         @media (max-width: $bp-lg) {
                             position: relative;
                             left: 0px;
-                            display: block;
                             background-color: transparent;
                             margin-left: 1em;
                             width: calc(100% - 1em);
@@ -578,6 +586,7 @@ header {
                                 width: 100%;
                                 @media (max-width: $bp-lg) {
                                     padding: .5em 1.5em;
+                                    width: fit-content;
                                 }
                                 &:hover, &:focus {
                                     background-color: $accent-color;
@@ -590,7 +599,7 @@ header {
                             }
                             &.hover-submenu {
                                 position: relative;
-                                display: block;
+                                // display: block;
                                 transition: $transition;
                                 .sub-menu-2 {
                                     @include list();
@@ -606,7 +615,7 @@ header {
                                     @media (max-width: $bp-lg) {
                                         position: relative;
                                         left: 0px;
-                                        display: block;
+                                        // display: block;
                                         background-color: transparent;
                                         margin-left: 2em;
                                         width: calc(100% - 2em);
@@ -625,26 +634,39 @@ header {
                                     }
                                 }
                                 &:hover, &:focus {
-                                    &>a {
-                                        background-color: $accent-color;
-                                        color: $bg-color;
-                                        @media (max-width: $bp-lg) {
-                                            background-color: transparent;
-                                            color: $accent-color;
+                                    @media (min-width: 992px) {
+                                        &>a {
+                                            background-color: $accent-color;
+                                            color: $bg-color;
+                                            @media (max-width: $bp-lg) {
+                                                background-color: transparent;
+                                                color: $accent-color;
+                                            }
                                         }
+                                        .sub-menu-2 {display: block;}
                                     }
-                                    .sub-menu-2 {display: block;}
                                 }
                             }
                         }
                     }
                     &:hover, &:focus {
-                        .sub-menu {display: block;}
+                        @media (min-width: 992px) {
+                            .sub-menu {display: block;}
+                        }
                     }
                 }
             }
         }
         
+    }
+    .icon {
+        display: flex;
+        font-size: 1.25em;
+        color: $accent-color;
+        transition: $transition;
+        &:hover, &:focus, &:active {
+            color: darken($accent-color, 7%);
+        }
     }
 }
 .logo {
@@ -690,6 +712,7 @@ main {
             background-repeat: no-repeat;
             background-position: right center;
             background-size: cover;
+            height: 450px;
         }
         h1 {
             font-size: 5em;
@@ -702,18 +725,55 @@ main {
             }
             @media (max-width: $bp-md) {
                 font-size: 3em;
+                margin-bottom: 1em;
             }
             @media (max-width: $bp-sm) {
-                font-size: 2.5em;
+                font-size: 2.85em;
             }
         }
         .box {
             @include flex(column, space-between, flex-start, nowrap);
+            @media (max-width: $bp-lg) and (min-width: 768px) {
+                padding-bottom: 2em;
+            }
+            @media (max-width: $bp-md) {
+                justify-content: center;
+            }
             button {min-width: unset;}
             blockquote {
+                position: relative;
                 width: 70%;
                 @media (max-width: $bp-lg) {
                     width: 100%;
+                }
+            }
+            .social {
+                @media (max-width: $bp-lg) {
+                    position: absolute;
+                    right: 1.5em;
+                    top: 0px;
+                    flex-direction: column;
+                }
+                @media (max-width: $bp-sm) {
+                    right: 1em;
+                }
+                .icon {
+                    display: flex;
+                    font-size: 1.35em;
+                    color: $accent-color;
+                    transition: $transition;
+                    @media (max-width: $bp-lg) {
+                        background-color: $accent-color;
+                        color: $bg-color;
+                        padding: .3em;
+                    }
+                    &:hover, &:focus, &:active {
+                        color: darken($accent-color, 7%);
+                        @media (max-width: $bp-lg) {
+                            color: $bg-color;
+                            background-color: darken($accent-color, 7%);
+                        }
+                    }
                 }
             }
         }
@@ -722,7 +782,7 @@ main {
         height: 600px;
     }
     @media (max-width: $bp-xl) {
-        height: 520px;
+        height: 550px;
     }
     @media (max-width: $bp-lg) {
         padding-top: 0px;
@@ -732,7 +792,7 @@ main {
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        height: 370px;
+        height: 500px;
     }
     .box {
         background: rgba(255, 255, 255, 0.9);
@@ -740,15 +800,16 @@ main {
         @media (max-width: $bp-lg) {
             padding-top: 2em;
         }
+        @media (max-width: $bp-md) {
+            padding-top: 0em;
+            @include flex(column, center, stretch, nowrap);
+        }
         @media (max-width: $bp-sm) {
             background: transparent;
         }
         h1 {
             span {
                 font-size: 2.6em;
-                @media (max-width: $bp-xl) {
-                    font-size: 1.75em;
-                }
             }
         }
         ul {
@@ -763,7 +824,7 @@ main {
                 width: 80%;
             }
             @media (max-width: $bp-sm) {
-                width: 100%;
+                width: 70%;
                 color: $font-color;
                 margin-bottom: 1em;
             }
@@ -795,11 +856,12 @@ main {
                 }
             }
         }
-        button {
+        .btn-1, .btn-2 {
             min-width: 265px;
-            img {
-                max-width: 2.5em;
+            @media (max-width: $bp-sm) {
+                min-width: 230px;
             }
+            img {max-width: 2.5em;}
         }
     }
 }
@@ -866,16 +928,20 @@ main {
             position: absolute;
             bottom: 0px;
             &-bullet {
-                width: 10px;
-                height: 10px;
+                width: .6em;
+                height: .6em;
                 border-radius: 50%;
                 background-color: $light-gray;
                 transition: $transition;
                 opacity: 1;
                 margin: 0px;
-                &:not(:first-child){margin-left: 25px;}
+                &:not(:first-child){margin-left: 1.5em;}
                 &-active {
                     background-color: $accent-color;
+                }
+                @media (max-width: $bp-sm) {
+                    width: .5em;
+                    height: .5em;
                 }
             }
         }
@@ -885,6 +951,9 @@ main {
 .sec-3 {
     position: relative;
     overflow: hidden;
+    @media (max-width: $bp-sm) {
+        margin-bottom: 5.5em;
+    }
     &:not(.no-after) {
         &::after {
             content: '';
@@ -948,7 +1017,7 @@ main {
             font-size: 1em;
         }
         @media (max-width: $bp-sm) {
-            width: 100%;
+            width: 60%;
         }
     }
 
@@ -1294,6 +1363,19 @@ main {
 
 .sec-7 {
     overflow: hidden;
+    .img-fluid {
+        @media (max-width: $bp-lg) {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+        @media (max-width: $bp-md) {
+            height: 370px;
+        }
+        @media (max-width: $bp-sm) {
+            height: 65vw;
+        }
+    }
     ul {
         @include list();
         margin-bottom: 6em;
@@ -1358,9 +1440,7 @@ main {
             color: rgba(251, 251, 251, 0.5);
             font-weight: 700;
             font-size: 3.5em;
-            @media (max-width: $bp-sm) {
-                font-size: 1.5em;
-            }
+            line-height: 100%;
         }
         &:nth-child(1){
             grid-column: 1/9;
@@ -1419,7 +1499,7 @@ main {
             background-position: right center;
             color: $bg-color;
             @media (max-width: $bp-xl) {
-                background-blend-mode: overlay;
+                // background-blend-mode: overlay;
                 background-color: $accent-color;
             }
             @media (max-width: $bp-lg) {
@@ -1851,6 +1931,9 @@ blockquote {
 
 .sec-14 {
     color: #4C4C5E;
+    @media (max-width: $bp-sm) {
+        .fs-13 {font-size: 1em;}
+    }
     .top {
         @include flex(row, space-between, center, nowrap);
         img {
@@ -1948,11 +2031,69 @@ footer {
     padding: 3em 0;
     color: $gray;
     font-size: .875em;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "area1 area1 area1 area1 area1 . area4 area4 area4 area4 area5 area5"
+    "area2 area2 area2 area2 area2 . area4 area4 area4 area4 . ."
+    "area3 area3 area3 area3 area3 . area4 area4 area4 area4 area6 area6";
+    @media (max-width: $bp-xl) {
+        grid-template-areas: 
+        "area1 area1 area1 area1 area1 area4 area4 area4 area4 area5 area5 area5"
+        "area2 area2 area2 area2 area2 area4 area4 area4 area4 . . ."
+        "area3 area3 area3 area3 area3 area4 area4 area4 area4 area6 area6 area6";
+    }
+    @media (max-width: $bp-lg) {
+        grid-template-areas: 
+        "area1 area1 area1 area1 area4 area4 area4 area4 area4 area5 area5 area5"
+        "area2 area2 area2 area2 area4 area4 area4 area4 area4 . . ."
+        "area3 area3 area3 area3 area4 area4 area4 area4 area4 area6 area6 area6";
+    }
     @media (max-width: $bp-md) {
         padding: 2em 0;
+        grid-template-columns: 1fr;
+        grid-template-areas: "area1" "area4" "area5" "area3" "area2" "area6";
+        gap: .5em;
     }
-    @media (max-width: $bp-sm) {
-        padding: 1em 0;
+    .grid-1 {
+        grid-area: area1;
+        @media (max-width: $bp-md) {
+            @include flex(column, flex-start, center, nowrap);
+        }
+    }
+    .grid-2 {
+        grid-area: area2;
+        @media (max-width: $bp-md) {
+            @include flex(row, center, center, nowrap);
+        }
+    }
+    .grid-3 {
+        grid-area: area3;
+        @media (max-width: $bp-md) {
+            text-align: center;
+        }
+    }
+    .grid-4 {
+        grid-area: area4;
+        @include flex(row, space-evenly, flex-start, nowrap);
+    }
+    .grid-5 {
+        grid-area: area5;
+        @media (max-width: $bp-md) {
+            form {
+                width: 50%;
+                font-size: 1.2em;
+                margin: auto;
+            }
+        }
+    }
+    .grid-6 {
+        grid-area: area6;
+        @include flex(row, flex-end, flex-end, nowrap);
+        @media (max-width: $bp-md) {
+            justify-content: center;
+        }
     }
     .phone-link {
         display: block;
@@ -1960,6 +2101,25 @@ footer {
         border-radius: $radius;
         width: fit-content;
         padding: .5em 1em;
+    }
+    .icon {
+        display: flex;
+        font-size: 1.25em;
+        color: $accent-color;
+        transition: $transition;
+        &:hover, &:focus, &:active {
+            color: darken($accent-color, 7%);
+            @media (max-width: $bp-md) {
+                color: #fff;
+                background-color: darken($accent-color, 7%);
+            }
+        }
+        @media (max-width: $bp-md) {
+            background-color: #EFC3A3;
+            color: #fff;
+            padding: 0.3em;
+            font-size: 1.5em;
+        }
     }
     .menu {
         li:not(:first-child){margin-top: .75em;}
