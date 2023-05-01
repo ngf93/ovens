@@ -699,6 +699,10 @@ button {
   content: '-';
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 16px;
   font-family: 'Inter';
