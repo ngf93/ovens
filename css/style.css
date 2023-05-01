@@ -1338,6 +1338,7 @@ main {
 
 .sec-1 .box .btn-1, .sec-1 .box .btn-2 {
   min-width: 265px;
+  padding: 1.4em 3em;
 }
 
 @media (max-width: 575.98px) {

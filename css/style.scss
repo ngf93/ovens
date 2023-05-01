@@ -858,6 +858,7 @@ main {
         }
         .btn-1, .btn-2 {
             min-width: 265px;
+            padding: 1.4em 3em;
             @media (max-width: $bp-sm) {
                 min-width: 230px;
             }
