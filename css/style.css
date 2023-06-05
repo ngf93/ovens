@@ -1478,15 +1478,27 @@ main {
   font-size: 0.75em;
   padding: 1em;
 }
-.product .mark {
+.product .marks-list {
   position: absolute;
   top: 1.25em;
   right: 0.625em;
   z-index: 10;
+  font-size: 0.75em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+  list-style: none;
+  padding-left: 0px;
+}
+.product .marks-list li:not(:first-child) {
+  margin-top: 0.5em;
+}
+.product .marks-list .mark {
   width: 8em;
   height: 2em;
   text-transform: uppercase;
-  font-size: 0.75em;
   font-weight: 600;
   color: #ffffff;
   background-color: #7B7B7B;
@@ -1496,7 +1508,7 @@ main {
   align-items: center;
   flex-wrap: nowrap;
 }
-.product .mark.special {
+.product .marks-list .mark.special {
   background-color: #DC3131;
 }
 
