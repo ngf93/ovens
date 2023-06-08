@@ -10,6 +10,9 @@ const swiper1 = new Swiper('.swiper-1', {
   fadeEffect: {
     crossFade: true
   },
+  autoplay: {
+    delay: 10000,
+  },
 });
 
 const swiper2 = new Swiper('.swiper-portfolio', {
